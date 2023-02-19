@@ -1,1 +1,137 @@
-<h1> Hello! <h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/slides.css">
+</head>
+
+<body>
+<div class="topnav">
+  <a href="./index.html">Home</a>
+  <a href="./words.html">Words</a>
+  <a href="./about.html">About</a>
+</div>
+  
+<h1 id="title" class = "title">
+<span style="font-size:0.75em">poporo's</span>
+  <br>
+MIDNIGHT DINER<br>
+<span style="font-size:0.75em">open 12am - 7am</span>
+<br>
+  <button id = 'playbutton' onclick = "showElement('slidepage'); hideElement('title'); hideElement('playbutton')"> play &rarr; </button>
+</h1>
+  
+
+
+
+<div id = 'slidepage' style="display:none">
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- SLIDE 1: INTRO -->
+  <div class="mySlides fade" id="intro">
+    <h1>Hello, Poporo!</h1>
+    <p id="intro_text">
+      Welcome to the midnight diner! You're the chef of a dreamscape restaurant, where your customers come from anywhere in space and time. <br><br>
+      Let's see what we can do to share a little joy with them :)
+    </p>
+    <button id = 'contbutton1' onclick = "nextSubSlide()"> i'm down! &rarr; </button>
+  </div>
+  <!-- SUBSLIDE 1: INTRO2 -->
+  <div class="mySubSlides fade" id="intro_2">
+    <p id="intro_start">
+    Confused? Don't worry, we'll walk you through your first night. <br> <br>
+    </p>
+    <button id = 'contbutton2' onclick = "nextSlide()"> let's open! &rarr; </button>
+  </div>
+
+  <!-- FIX THIS: SLIDE 2: NIGHT1 -->
+  <!-- dark screen with night 1, fade to diner, someone walks in -->
+  <div class="mySlides fade" id="night1">
+    <p class="nightText appear3" onload="setBackground('you.jpeg')">
+    Look, it's you, hard at work prepping for the night!
+    </p>
+    <button class="nightButton appear3" onclick = "nextSubSlide()"> hard at work or hardly working? &rarr; </button>
+    <h1 id="n1_intro1" class="night_title disappear3"> NIGHT 1 </h1>
+  </div>
+  
+  <!-- SUBSLIDE 2: first customer intro add sound for ding! if poss -->
+  <div class="mySubSlides fade" onload="backgroundSeq('cust1-1.jpeg', 'cust1-2.jpeg', 1.5)">
+    
+    <p id="n1_intro2" class="nightText">
+  DING! It looks like your first customer has walked in.
+    </p>
+    <button class="nightButton" onclick = "nextSubSlide()"> who is this? &rarr; </button>
+  </div>
+
+  <!-- SUBSLIDE 3: customer talk -->
+  <div class="mySubSlides fade">
+  <p id="n1_overview" class="nightText">
+  You'll receive new customers each night. They won't always know why they ended up here, but everything happens for a reason.
+  </p>
+  <button class="nightButton" onclick="nextSubSlide()"> NEXT &rarr; </button>
+  </div>
+
+  <!-- graphics: the first customer, text appears and then fades out -->
+  <div class="mySubSlides fade" onload="setBackground('cust1-3.jpeg')">
+  <p id="a_n1_1" class="nightText">
+    Mystery Customer: "Where am I??"
+  </p>
+  <button class="nightButton" onclick="nextSubSlide()"> NEXT &rarr; </button>
+  </div>
+
+  <div class="mySubSlides fade" onload="nextSubSlideDelay(3)">
+  <p id="n1_overview" class="nightText">
+  Let's greet your first customer.
+  </p>
+  </div>
+
+  <div class="mySubSlides fade" onload="nextSubSlideDelay(3)">
+  <p id="n1_overview" class="nightConvo">
+  "Welcome to the Midnight Diner. I can make anything you desire for you tonight."
+  </p>
+  </div>
+
+  <div class="mySubSlides fade" onload="nextSubSlideDelay(3)">
+  <p id="n1_overview" class="nightConvo">
+  "Anything at all?"
+  </p>
+  </div>
+  
+  
+  <div class="mySlides fade">
+    <b>NIGHT 2</b>
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <b>NIGHT 3</b>
+    <div class="text">Caption Three</div>
+  </div>
+
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" id="dot2" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+  
+</div>
+</body>
+<script type='text/javascript' > 
+  var slideIndex = 1;
+  var subSlideIndex = 0;
+  var slideCounts = new Object();
+  slideCounts[1] = 0; 
+  slideCounts[2] = 2;
+  //FINISH THESE PROPERLY
+  slideCounts[3] = 2;
+  slideCounts[4] = 2;
+</script>
+  
+<script src="js/core/main.js"></script>
+<script src="js/core/slideshow.js"></script>
