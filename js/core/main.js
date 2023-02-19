@@ -30,7 +30,7 @@ function fadeBackground() {
   
   setTimeout(function(){
     document.body.style.background = "#2B2E63";
-    setBackground("diner.png")
+    setBackground("you.jpeg")
     // document.body.style.backgroundImage = "url('assets/diner.png')";
     // document.body.style.backgroundSize ="100% 100%";
     }, 3000);

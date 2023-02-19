@@ -38,7 +38,7 @@ button {
 
 .nightButton {
   font-family: 'FuturaHandwritten';
-  background-color: #30003d;
+  background-color: rgba(48, 0, 61,0.7);
   border: none;
   color: white;
   padding: 15px 20px;
@@ -51,7 +51,7 @@ button {
 
 .nightText {
   font-family: 'FuturaHandwritten';
-  background-color: #30003d;
+  background-color: rgba(48, 0, 61,0.7);
   color: white;
   text-align: center;
   font-size: 20px;
