@@ -54,6 +54,14 @@
 
 
 /* The dots/bullets/indicators */
+.bottomdot {
+  position:fixed;
+  bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+
 .dot{
 	width: 20px;
 	height: 20px;
