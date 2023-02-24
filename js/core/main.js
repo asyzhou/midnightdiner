@@ -53,11 +53,15 @@ contbutton2.addEventListener('click', function onClick(event) {
 
 /** ****SOUNDS ***** */
 var myMusic;
+var musicPlaying = false;
 var dingSound;
 
 function startMusic(){
-   myMusic = new sound("assets/theme.mp3");
-  myMusic.play();
+  myMusic = new sound("assets/theme.mp3");
+  if (!musicPlaying) {
+    myMusic.play();
+    musicPlaying = true;
+  }
 }
 
 function sound(src) {
@@ -84,4 +88,7 @@ function ding(){
 /** **using spacebar */
 window.onkeypress = function() {
   nextSubSlideTester()
+}
+
+window.onload = function() {
 }

@@ -6,11 +6,13 @@
   <link rel="stylesheet" href="css/slides.css">
 </head>
 
-<body onload="startMusic()">
+<body>
+  <div class="topbar">
   <div class="topnav">
     <a href="./index.html">Home</a>
     <a href="./words.html">Words</a>
     <a href="./about.html">About</a>
+  </div>
   </div>
 
   <h1 id="title" class="title">
@@ -19,7 +21,7 @@
     MIDNIGHT DINER<br>
     <span style="font-size:0.75em">open 12am - 7am</span>
     <br>
-    <button id='playbutton' onclick="showElement('slidepage'); hideElement('title'); hideElement('playbutton')"> play
+    <button id='playbutton' onclick="showElement('slidepage'); hideElement('title'); hideElement('playbutton'); startMusic()"> play
       &rarr; </button>
   </h1>
 
@@ -142,3 +144,4 @@
 
 <script src="js/core/main.js"></script>
 <script src="js/core/slideshow.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
