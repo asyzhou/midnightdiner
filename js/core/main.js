@@ -20,8 +20,9 @@ function setBackground(image) {
 
 function backgroundSeq(image1, image2, sec) {
   setBackground(image1);
-  setTimeout(setBackground(image2), sec * 1000);
+  setTimeout(function(){setBackground(image2)}, sec * 1000);
 }
+
 
 /** night one background stuff ** */
 function fadeBackground() {
@@ -49,3 +50,38 @@ contbutton2.addEventListener('click', function onClick(event) {
     }, 3000);
   
 }); ** */
+
+/** ****SOUNDS ***** */
+var myMusic;
+var dingSound;
+
+function startMusic(){
+   myMusic = new sound("assets/theme.mp3");
+  myMusic.play();
+}
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+
+function ding(){
+  dingSound = new sound("assets/vine-boom.mp3")
+  dingSound.play()
+}
+
+
+/** **using spacebar */
+window.onkeypress = function() {
+  nextSubSlideTester()
+}

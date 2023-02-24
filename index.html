@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/slides.css">
 </head>
 
-<body>
+<body onload="startMusic()">
   <div class="topnav">
     <a href="./index.html">Home</a>
     <a href="./words.html">Words</a>
@@ -54,16 +54,16 @@
         <p class="nightText appear3" onbeforeprint="setBackground('you.jpeg');">
           Look, it's you, hard at work prepping for the night!
         </p>
-        <button class="nightButton appear3" onclick="nextSubSlide()"> hard at work or hardly working? &rarr; </button>
+        <button class="nightButton appear3" onclick=" nextSubSlide();  backgroundSeq('cust1-1.jpeg', 'cust1-2.jpeg', 1.5); ding();"> hard at work or hardly working? &rarr; </button>
         <h1 id="n1_intro1" class="night_title disappear3"> NIGHT 1 </h1>
       </div>
 
       <!-- SUBSLIDE 2: first customer intro add sound for ding! if poss -->
-      <div class="mySubSlides fade" >
+      <div class="mySubSlides fade">
         <p id="n1_intro2" class="nightText">
           DING! It looks like your first customer has walked in.
         </p>
-        <button class="nightButton" onclick="nextSubSlide()"> who is this? &rarr; </button>
+        <button class="nightButton" onclick="nextSubSlide()"  > who is this? &rarr; </button>
 <!--         onclick="backgroundSeq('cust1-1.jpeg', 'cust1-2.jpeg', 1.5);" -->
       </div>
 
@@ -73,32 +73,35 @@
           You'll receive new customers each night. They won't always know why they've ended up here, but everything happens
           for a reason.
         </p>
-        <button class="nightButton" onclick="nextSubSlide()"> hmm &rarr; </button>
+        <button class="nightButton" onclick="nextSubSlide(); setBackground('stars_filler.jpeg');"> hmm &rarr; </button>
       </div>
 
       <!-- graphics: the first customer, text appears and then fades out -->
-      <div class="mySubSlides fade" onload="setBackground('cust1-3.jpeg')">
+      <div class="mySubSlides fade">
         <p id="a_n1_1" class="nightText">
           Mystery Customer: "Where am I??"
         </p>
-        <button class="nightButton" onclick="nextSubSlide()">  &rarr; </button>
+        <button class="nightButton" onclick="nextSubSlide(); setBackground('cust1-3.jpeg');">  &rarr; </button>
+        <img src="assets/cust1.png" style="width:500px;float:right;">
       </div>
 
       <div class="mySubSlides fade" onload="nextSubSlideDelay(3)">
         <p id="n1_overview" class="nightText">
           Let's greet your first customer.
         </p>
+        <button class="nightButton" onclick="nextSubSlide()">  &rarr; </button>
       </div>
 
       <div class="mySubSlides fade" onload="nextSubSlideDelay(3)">
         <p id="n1_overview" class="nightConvo">
           "Welcome to my midnight diner. What would you like tonight?"
         </p>
+        <button class="nightButton" onclick="nextSubSlide()">  &rarr; </button>
       </div>
 
       <div class="mySubSlides fade" onload="nextSubSlideDelay(3)">
         <p id="n1_overview" class="nightConvo">
-          "Anything at all?"
+          "ayo"
         </p>
       </div>
 
@@ -131,7 +134,7 @@
   var subSlideIndex = 0;
   var slideCounts = new Object();
   slideCounts[1] = 0;
-  slideCounts[2] = 2;
+  slideCounts[2] = 6;
   //FINISH THESE PROPERLY
   slideCounts[3] = 2;
   slideCounts[4] = 2;
